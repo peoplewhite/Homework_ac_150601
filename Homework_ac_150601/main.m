@@ -12,19 +12,15 @@
 int main(int argc, char * argv[]) {
   
     //Homework 150602 vvv
-    int aNum = 0;
+    int aNum = arc4random() % 100;
     int bNum = 0;
     int cNum = 0;
     int dNum = 0;
     BOOL isFindValue = NO;
 //     100 > a > b > c > d > 0
-    for (int i = 0; i < 4; i++) {
+    for (int i = 1; i < 4; i++) {
         while (!isFindValue) {
-            if (i == 0) {
-                aNum = arc4random() % 100;
-                isFindValue = YES;
-            }
-            else if (i == 1) {
+            if (i == 1) {
                 bNum = arc4random() % 100;
                 if (bNum < aNum) {
                     isFindValue = YES;
@@ -47,6 +43,7 @@ int main(int argc, char * argv[]) {
     }
     
     NSLog(@"100 > %i > %i > %i > %i > 0", aNum, bNum, cNum, dNum);
+    NSLog(@"a=%i, b=%i, c=%i, d=%i", aNum, bNum, cNum, dNum);
     
     
     //Homework 150602 ^^^
