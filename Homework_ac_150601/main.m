@@ -10,45 +10,52 @@
 #import "AppDelegate.h"
 
 int main(int argc, char * argv[]) {
-  
+
     //Homework 150602 vvv
-    int aNum = arc4random() % 100;
+    int aNum = 0;
     int bNum = 0;
     int cNum = 0;
     int dNum = 0;
     BOOL isFindValue = NO;
 //     100 > a > b > c > d > 0
-    for (int i = 1; i < 4; i++) {
+    
+    for (int i = 0; i < 4; i++) {
         while (!isFindValue) {
-            if (i == 1) {
+            if (i == 0) {
+                aNum = arc4random() % 100;
+                if (aNum >= 4) {
+                    isFindValue = YES;
+                }
+            }
+            else if (i == 1) {
                 bNum = arc4random() % 100;
-                if (bNum < aNum) {
+                if ((bNum < aNum) && (bNum >= 3)) {
                     isFindValue = YES;
                 }
             }
             else if (i == 2) {
                 cNum = arc4random() % 100;
-                if (cNum < bNum) {
+                if ((cNum < bNum) && (cNum >= 2)) {
                     isFindValue = YES;
                 }
             }
             else if (i == 3) {
                 dNum = arc4random() % 100;
-                if (dNum < cNum) {
+                if ((dNum < cNum) && (dNum != 0)) {
                     isFindValue = YES;
                 }
             }
         }
         isFindValue = NO;
     }
-    
+
     NSLog(@"100 > %i > %i > %i > %i > 0", aNum, bNum, cNum, dNum);
     NSLog(@"a=%i, b=%i, c=%i, d=%i", aNum, bNum, cNum, dNum);
-    
-    
+
+
     //Homework 150602 ^^^
-    
-    
+
+
     //Homework 150601 vvv
 //    int randomNumber = arc4random() % 10;
 
