@@ -11,7 +11,10 @@
 #import <Foundation/Foundation.h>
 
 @interface Random4Number : NSObject
-
+{
+    int aNum, bNum, cNum, dNum;
+    BOOL isFindValue;
+}
 - (void)calculateRandom;
 - (void)showResult;
 

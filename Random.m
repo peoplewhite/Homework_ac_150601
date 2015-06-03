@@ -10,10 +10,7 @@
 #import "Random.h"
 
 @implementation Random4Number
-{
-    int aNum, bNum, cNum, dNum;
-    BOOL isFindValue;
-}
+
 
 - (void)calculateRandom {
     while (!isFindValue) {
